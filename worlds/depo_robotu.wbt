@@ -1,0 +1,326 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/chairs/protos/WoodenChair.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.4319805827987184 -0.4372211755152792 -0.7888158338712004 4.489097404514219
+  position -0.13244387864396306 -15.362841291467303 25.076468975932144
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0 0 -0.01
+  floorSize 10 10
+}
+Robot {
+  translation -3.48115 0.0243618 0.13895
+  rotation 2.0320430525065572e-12 3.538932239530904e-10 1 3.1300691981930515
+  children [
+    Solid {
+      translation 0.01 -0.25 0.52
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.9 0 0.2
+          }
+          geometry Box {
+            size 0.02 0.2 0.3
+          }
+        }
+      ]
+      name "bariyer_sag"
+      boundingObject Box {
+        size 0.02 0.2 0.3
+      }
+    }
+    Solid {
+      translation -0.25 0 0.53
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.9 0 0.2
+          }
+          geometry Box {
+            size 0.02 0.2 0.3
+          }
+        }
+      ]
+      name "bariyer_arka"
+      boundingObject Box {
+        size 0.02 0.2 0.3
+      }
+    }
+    Solid {
+      translation 0.00999972 0.23 0.52
+      rotation 0 0 1 1.5708
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.9 0 0.2
+          }
+          geometry Box {
+            size 0.02 0.2 0.3
+          }
+        }
+      ]
+      name "bariyer_sol"
+      boundingObject Box {
+        size 0.02 0.2 0.3
+      }
+    }
+    Solid {
+      translation 0.25 -0.02 0.54
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.9 0 0.2
+          }
+          geometry Box {
+            size 0.02 0.2 0.3
+          }
+        }
+      ]
+      name "bariyer_on"
+      boundingObject Box {
+        size 0.02 0.2 0.3
+      }
+    }
+    Solid {
+      translation 0 0 0.36
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 1 0.6 0.3
+          }
+          geometry Cylinder {
+            height 0.02
+            radius 0.3
+          }
+        }
+      ]
+      name "tasima_tepsisi"
+      boundingObject Cylinder {
+        height 0.02
+        radius 0.3
+      }
+    }
+    DistanceSensor {
+      translation 0.47 0 0
+      name "ds_on"
+      lookupTable [
+        0 0 0
+        1.5 1000 0
+      ]
+    }
+    DistanceSensor {
+      translation 0.47 0 0
+      rotation 0 0 1 1
+      name "ds_sol"
+      lookupTable [
+        0 0 0
+        1 1000 0
+      ]
+    }
+    DistanceSensor {
+      translation 0.47 4.26941e-07 0
+      rotation 0 0 -1 1
+      name "ds_sag"
+      lookupTable [
+        0 0 0
+        1 1000 0
+      ]
+    }
+    InertialUnit {
+      name "imu"
+    }
+    GPS {
+    }
+    Camera {
+      translation 0 0 0.07
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 0
+          }
+          geometry Cylinder {
+            height 0.03
+            radius 0.03
+          }
+        }
+      ]
+      name "rgb_camera"
+      width 640
+      height 480
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1506.2092975782264
+        axis 0 1 0
+        anchor 0 -0.45 0
+      }
+      device [
+        RotationalMotor {
+          name "right_wheel_motor"
+        }
+      ]
+      endPoint Solid {
+        translation 0 -0.45 0
+        rotation 0.5065015259428617 -0.6096939696890908 0.6096962092241601 2.203925030949773
+        children [
+          Shape {
+            geometry Cylinder {
+              height 0.05
+              radius 0.15
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject Cylinder {
+          height 0.05
+          radius 0.15
+        }
+        physics Physics {
+          mass 1
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 2118.9846604225227
+        axis 0 1 0
+        anchor 0 0.45 0
+      }
+      device [
+        RotationalMotor {
+          name "left_wheel_motor"
+        }
+      ]
+      endPoint Solid {
+        translation 0 0.45 0
+        rotation -0.584888861415963 -0.5735427635193366 0.5735448702639928 4.200057979916626
+        children [
+          Shape {
+            geometry Cylinder {
+              height 0.05
+              radius 0.15
+            }
+          }
+        ]
+        boundingObject Cylinder {
+          height 0.05
+          radius 0.15
+        }
+        physics Physics {
+          mass 1
+        }
+      }
+    }
+    Shape {
+      geometry Cylinder {
+        height 0.2
+        radius 0.4
+      }
+    }
+  ]
+  boundingObject Group {
+    children [
+      Pose {
+        translation -0.3 0 0
+        children [
+          Sphere {
+            radius 0.15
+          }
+        ]
+      }
+      Pose {
+        translation 0.3 0 0
+        children [
+          Sphere {
+            radius 0.15
+          }
+        ]
+      }
+      Cylinder {
+        height 0.2
+        radius 0.4
+      }
+    ]
+  }
+  physics Physics {
+    mass 2
+  }
+  controller "tam_entegre"
+  controllerArgs [
+    ""
+  ]
+}
+CardboardBox {
+  translation 4.24 1.72 0.23
+  size 0.5 0.5 0.5
+}
+WoodenChair {
+  translation -4.81738 -4.75023 0.01
+  rotation 0 0 1 3.14159
+}
+Solid {
+  translation 3 2 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+      }
+      geometry Cylinder {
+        height 0.01
+        radius 0.2
+      }
+    }
+  ]
+}
+Solid {
+  translation 1.13 3 0.27
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.4 4 0.5
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject Box {
+    size 0.4 4 0.5
+  }
+}
+Solid {
+  translation -2.11 -0.19 0.25
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.4 4 0.5
+      }
+    }
+  ]
+  name "solid(2)"
+  boundingObject Box {
+    size 0.4 4 0.5
+  }
+}
+CardboardBox {
+  translation 4.15054 3.23686 0.195072
+  rotation -0.001789767994726881 -0.7069819982695904 -0.7072292774293649 -3.136088995544019
+  name "cardboard box(1)"
+  size 0.3 0.3 0.3
+  mass 1
+}
