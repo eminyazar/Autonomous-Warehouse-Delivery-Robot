@@ -1,3 +1,4 @@
+
 # 🤖 Autonomous-Warehouse-Delivery-Robot (AGV)
 This project was inspired by the Amazon Kiva model.
 ![Webots](https://img.shields.io/badge/Simulator-Webots-blue)
@@ -6,9 +7,9 @@ This project was inspired by the Amazon Kiva model.
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
 <p align="center">
-  <img width="800" alt="depo_robotu" src="[https://github.com/user-attachments/assets/0706cbe4-ad38-450a-9968-bdf115bbdca6](https://github.com/user-attachments/assets/0706cbe4-ad38-450a-9968-bdf115bbdca6)" />
+  <img width="800" alt="depo_robotu" src="https://github.com/user-attachments/assets/b858e115-47ca-4c99-ace3-b94fdfba15a0" />
   <br>
-  <img width="500" alt="YOLO_Detection" src="[https://github.com/user-attachments/assets/373e3d59-6068-4722-9283-45b6b3d47747](https://github.com/user-attachments/assets/373e3d59-6068-4722-9283-45b6b3d47747)" />
+  <img width="500"  alt="YOLO_Detection" src="https://github.com/user-attachments/assets/cdb18c8a-f539-4f4c-b16f-227b2be26130" />
 </p>
 
 ## 📌 Overview
