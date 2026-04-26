@@ -1,6 +1,7 @@
 
 # 🤖 Autonomous-Warehouse-Delivery-Robot (AGV)
 This project was inspired by the Amazon Kiva model.
+
 ![Webots](https://img.shields.io/badge/Simulator-Webots-blue)
 ![Python](https://img.shields.io/badge/Language-Python_3.8+-yellow)
 ![YOLO](https://img.shields.io/badge/Computer_Vision-YOLOv11-orange)
